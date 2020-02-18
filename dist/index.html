@@ -18,7 +18,7 @@
     <link rel="icon" sizes="192x192"  href="./s/icons/android-icon-192x192.png">
     <link rel="icon" sizes="96x96" href="./s/icons/favicon-96x96.png">
     <link rel="manifest" href="./s/icons/manifest.json">
-    <link rel="stylesheet" href="./s/css/layout-1.0.3.min.css" />
+    <link rel="stylesheet" href="./s/css/layout.css?<?= time(); ?>" />
     <noscript><div id="njs-notice"></div></noscript>
   </head>
   <body class="body">
@@ -103,32 +103,33 @@
               <div class="thumbnail">
                 <img src="s/images/screen-code.png" alt="Design icon" class="thumbnail-image" />
                 <div class="thumbnail-inner">
-                <h1>develop</h1>
-                <p>Server side development in PHP & database management.</p>
+                  <h1>develop</h1>
+                  <p>Server side development in PHP & database management.</p>
+                </div>
+              </div>
+              <div class="thumbnail">
+                <img src="s/images/responsive.png" alt="Design icon" class="thumbnail-image" />
+                <div class="thumbnail-inner">
+                  <h1>responsive</h1>
+                  <p>I make sure that the layout is fit for all devices' screens.</p>
+                </div>
               </div>
             </div>
-            <div class="thumbnail">
-              <img src="s/images/responsive.png" alt="Design icon" class="thumbnail-image" />
-              <div class="thumbnail-inner">
-                <h1>responsive</h1>
-                <p>I make sure that the layout is fit for all devices' screens.</p>
-              </div>
+            <span class="page-close" title="Close"></span>
+          </div>
+        </div>
+        <div class="page" data-for="portfolios">
+          <div class="page-inner">
+            <div class="page-title">portfolios</div>
+            <div class="page-body animated">
+              Nothing to show yet. Portfolios will be added soon.
             </div>
+            <span class="page-close" title="Close"></span>
           </div>
-          <span class="page-close" title="Close"></span>
         </div>
+       <img src="s/images/man-on-computer.png" alt="Man on desktop clip art" class="clip-art" />
       </div>
-      <div class="page" data-for="portfolios">
-        <div class="page-inner">
-          <div class="page-title">portfolios</div>
-          <div class="page-body animated">
-            Nothing to show yet. Portfolios will be added soon.
-          </div>
-          <span class="page-close" title="Close"></span>
-        </div>
-      </div>
-      <img src="s/images/man-on-computer.png" alt="Man on desktop clip art" class="clip-art" />
     </div>
-    <script type="text/javascript" src="s/js/core-1.0.1.min.js"></script>
+    <script type="text/javascript" src="s/js/core.js?<?= time(); ?>"></script>
   </body>
 </html>
