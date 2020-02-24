@@ -1,0 +1,1347 @@
+@import url('https://fonts.googleapis.com/css?family=Varela|Montserrat|Raleway:200,300,400');
+
+::selection {
+	background: #cfb67a;
+	color: #fff;
+}
+
+::-moz-selection {
+	background: #cfb67a;
+	color: #fff;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-family: sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+}
+
+@media only screen and (max-width: 366px) {
+	html {
+		min-width: 366px;
+	}
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Default anchor element without classes or id ------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+a {
+	color: #cfb67a;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #FFDE99;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Default header and paragraph text elements --------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+ h1, h2 {
+	color: #cfb67a;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 2.3rem;
+}
+
+h2 {
+	font-size: 1.2rem;
+}
+
+p {
+	font-size: 0.8rem;
+	letter-spacing: 0.02rem;
+	line-height: 1.30;
+	margin: 0.6rem 0;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Main body class -----------------------------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.body {
+	background-color: #151516;
+	color: #000;
+	font-family: 'Varela', sans-serif;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Wrapper - Aligns the item to the center of the page -----------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.wrapper {
+	width: 850px;
+	padding: 1rem;
+	margin: 4rem auto 3rem;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Main button class ---------------------------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.rt .btn::before {
+	content: '';
+	position: absolute;
+	background-color: #fff;
+	opacity: 0;
+	height: inherit;
+	width: inherit;
+	border-radius: inherit;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: opacity 0.3s ease, transform 0.2s;
+	-moz-transition: opacity 0.3s ease, transform 0.2s;
+	transition: opacity 0.3s ease, transform 0.2s;
+}
+
+.btn {
+	position: relative;
+	display: inline-block;
+	background-color: #cfb67a;
+	color: #000;
+	font-size: 0.55rem;
+	font-weight: bold;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	padding: 0.4rem 1.4rem;
+	margin: 0.5rem;
+	margin-left: 0;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	-webkit-box-shadow: 0 0 15px 0 rgba(207, 182, 122, 0.35);
+	-moz-box-shadow: 0 0 15px 0 rgba(207, 182, 122, 0.35);
+	box-shadow: 0 0 15px 0 rgba(207, 182, 122, 0.35);
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.rt .btn:hover::before {
+	opacity: 0.2;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+}
+
+.rt .btn:focus::before,
+.rt .btn:active::before {
+	opacity: 0.45;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Card classes --------------------------------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+/* Card background shapes */
+.rt .card::before,
+.rt .card::after {
+	content: '';
+	position: absolute;
+	z-index: -2;
+	-webkit-transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+	transform: rotate(20deg);
+}
+
+.rt .card::before {
+	background-image: -webkit-linear-gradient(to right, #212223, rgba(33, 34, 35, 0.001));
+	background-image: -moz-linear-gradient(to right, #212223, rgba(33, 34, 35, 0.001));
+	background-image: linear-gradient(to right, #212223, rgba(33, 34, 35, 0.001));
+	height: 450px;
+	width: 350px;
+	left: -5%;
+	bottom: -6.5%;
+}
+
+.rt .card::after {
+	background-image: -webkit-linear-gradient(to left, #212223, rgba(33, 34, 35, 0.001));
+	background-image: -moz-linear-gradient(to left, #212223, rgba(33, 34, 35, 0.001));
+	background-image: linear-gradient(to left, #212223, rgba(33, 34, 35, 0.001));
+	height: 380px;
+	width: 450px;
+	top: -20%;
+	right: -10%;
+}
+
+.card {
+	position: relative;
+	background-color: #1C1C1E;
+	z-index: 0;
+}
+
+.rt-njs .card {
+	height: 490px;
+}
+
+.rt .card {
+	overflow: hidden;
+	border-radius: 10px;
+	-webkit-box-shadow: 20px 40px 30px -10px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 20px 40px 30px -10px rgba(0, 0, 0, 0.35);
+	box-shadow: 20px 40px 30px -10px rgba(0, 0, 0, 0.35);
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Left intro item classes ---------------------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.intro {
+	display: inline-block;
+	position: relative;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	width: 285px;
+	min-height: 490px;
+	left: 4rem;
+}
+
+.intro-inner {
+	position: absolute;
+	top: 30%;
+}
+
+.intro-inner > h1 {
+	font-weight: 200;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Navbar classes ------------------------------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.nav {
+	list-style: none;
+	float: right;
+	padding: 0.5rem;
+	margin: 1rem;
+}
+
+.nav-item {
+	display: inline-block;
+}
+
+.nav-link {
+	position: relative;
+	color: #fff !important;
+	padding: 0.3rem 1rem;
+	text-decoration: none;
+	font: normal 0.6rem 'Montserrat', sans-serif;
+	letter-spacing: 0.12rem;
+	text-transform: uppercase;
+}
+
+.nav-link.collapsed:hover {
+	cursor: pointer;
+}
+
+.rt .nav-link::before {
+	content: '';
+	position: absolute;
+	background-color: #1C1C1E;
+	margin: auto;
+	opacity: 0;
+	height: 60px;
+	width: 60px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transition: transform 0.15s ease, opacity 0.3s;
+	-moz-transition: transform 0.15s ease, opacity 0.3s;
+	transition: transform 0.15s ease, opacity 0.3s;
+	-webkit-animation: remove-z-index 0.35s forwards;
+	-moz-animation: remove-z-index 0.35s forwards;
+	animation: remove-z-index 0.35s forwards;
+}
+
+.rt .nav-link.expanded::before {
+	-webkit-transform: scale(30);
+	-moz-transform: scale(30);
+	transform: scale(30);
+	-webkit-transition: transform 0.25s ease-out;
+	-moz-transition: transform 0.25s ease-out;
+	transition: transform 0.25s ease-out;
+	-webkit-animation: set-z-index 0.05s ease forwards;
+	-moz-animation: set-z-index 0.05s ease forwards;
+	animation: set-z-index 0.05s ease forwards;
+	opacity: 1;
+}
+
+.nav-link::after {
+	content: '';
+	position: absolute;
+	background-color: #cfb67a;
+	height: 0.12rem;
+	width: 40%;
+	margin: auto;
+	bottom: -0.4rem;
+	left: 0;
+	right: 0;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	transform: scale(0);
+}
+
+.rt .nav-link::after {
+	-webkit-transition: transform 0.3s;
+	-moz-transition: transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.nav-link.collapsed:hover::after {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Expandable page classes ---------------------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.page {
+	position: absolute;
+	display: none;
+	padding: 1rem;
+	opacity: 0.7;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	left: 0;
+	top: 0;
+}
+
+.page.visible {
+	display: block;
+}
+
+.page-inner {
+	color: #fff;
+	padding: 2rem 1rem;
+	padding-bottom: 2rem;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.page-inner::-webkit-scrollbar {
+	display: none;
+}
+
+.page-close {
+	position: absolute;
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") no-repeat center;
+	height: 24px;
+	width: 24px;
+	top: 20px;
+	right: 22px;
+	opacity: 1;
+}
+
+.rt .page-close {
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.page-close:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.page-title::before {
+	content: '';
+	position: absolute;
+	background-color: #cfb67a;
+	height: 0.15rem;
+	width: 15%;
+	left: 0;
+	bottom: -15px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
+
+.rt .page-title::before {
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	transform: scale(0);
+}
+
+.page-title {
+	position: relative;
+	color: #fff;
+	font: 300 2.2rem 'Raleway', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin: 0.5rem 0 2rem;
+}
+
+.rt .page-title {
+	opacity: 0;
+}
+
+.page-body {
+	position: relative;
+	font-size: 1rem;
+	padding: 1rem 0;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Thumbnail classes ---------------------------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.thumbnail {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 190px;
+	margin: 2.2rem 0;
+}
+
+.rt .thumbnail {
+	opacity: 0;
+}
+
+.thumbnail:first-child {
+	margin-right: 4rem;
+}
+
+.thumbnail:last-child {
+	margin-left: 4rem;
+}
+
+.thumbnail-image {
+	height: 80px;
+	margin: 1em;
+}
+
+.thumbnail-inner {
+	padding: 0 0.5rem;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Dropbox classes - basically works like dropdowns/popups -------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.dropbox {
+	position: relative;
+	display: inline-block;
+}
+
+.dropbox-body {
+	position: absolute;
+	display: none;
+	z-index: 9999;
+	right: 0;
+}
+
+.rt-njs .dropbox:hover > .dropbox-body {
+	display: block;
+}
+
+.rt .dropbox-body {
+	opacity: 0;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+	-moz-transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+	transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+}
+
+.rt .dropbox-body.active {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+}
+
+.dropbox-body-inner {
+	position: absolute;
+	background-color: #212223;
+	color: #fff;
+	padding: 1rem 2rem;
+	left: 15px;
+	bottom: -28px;
+	height: 220px;
+	width: 270px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.3);
+}
+
+.dropbox-body-inner::before {
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 30px;
+	bottom: 34px;
+	left: -30px;
+	border-top: 14px solid transparent;
+	border-right: 12px solid #212223;
+	border-bottom: 14px solid transparent
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Site logo banner classes for freelance websites ---------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.site-banner {
+	padding: 1rem 1.5rem;
+}
+
+.rt .site-banner {
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.site-banner:hover,
+.site-banner:active,
+.site-banner:focus {
+	opacity: 0.5;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Social media icons classes ------------------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.social-medias {
+	position: absolute;
+	display: inline-block;
+	margin: 1rem 0;
+	bottom: 0;
+	left: 0;
+}
+
+.social-medias-icon {
+	display: inline-block;
+	background: center no-repeat;
+	background-size: 16px 16px;
+	text-decoration: none;
+	height: 16px;
+	width: 16px;
+	margin: 1rem 0;
+	margin-right: 1.5rem;
+	opacity: 1;
+}
+
+.rt .social-medias-icon {
+	transition: opacity 0.3s ease;
+}
+
+.social-medias-icon:hover {
+	opacity: 0.5;
+}
+
+.social-medias-icon.twitter {
+	background-image: url('../icons/twitter.svg');
+}
+
+.social-medias-icon.instagram {
+	background-image: url('../icons/instagram.svg');
+}
+
+.social-medias-icon.whatsapp {
+	background-image: url('../icons/whatsapp.svg');
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Avatar image classes - for the about page ---------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.avatar::before {
+	content: '';
+	position: absolute;
+	background-color: #cfb67a;
+	height: inherit;
+	width: inherit;
+	z-index: -1;
+}
+
+.rt-njs .avatar::before {
+	-webkit-transform: translate(30px, 30px);
+	-moz-transform: translate(30px, 30px);
+	transform: translate(30px, 30px);
+}
+
+.avatar {
+	display: inline-block;
+	vertical-align: middle;
+	height: 220px;
+	width: 180px;
+	z-index: 1;
+}
+
+.rt .avatar {
+	opacity: 0;
+}
+
+.avatar > img {
+	height: inherit;
+	width: inherit;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * About paragraph class -----------------------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.about-paragraph {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 4rem;
+	width: 450px;
+}
+
+.rt .about-paragraph {
+	opacity: 0;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Separator class - makes --- or --- kind of ruler --------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.separator {
+	position: relative;
+	margin: 0.5rem;
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	text-align: center;
+	opacity: 0.4;
+}
+
+.separator::before,
+.separator::after {
+	content: '';
+	position: absolute;
+	background-color: #fff;
+	height: 0.09rem;
+	opacity: 0.4;
+	width: 30%;
+	top: 50%;
+}
+
+.separator::before {
+	left: 1.5rem;
+}
+
+.separator::after {
+	right: 1.5rem;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Notice id for disabled JavaScript notification banner ---------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.rt-njs #njs-notice::before {
+	content: 'Note: ';
+	font-weight: bold;
+}
+
+.rt-njs #njs-notice::after {
+	content: 'This is a basic layout without animations. It seems JavaScript is disabled on this browser.';
+}
+
+.rt-njs #njs-notice {
+	background-color: #151516;
+	color: #cfb67a;
+	padding: 10px 20px;
+	text-align: center;
+	width: 100%;
+	top: 0;
+	-webkit-border-bottom: 1.5px solid #cfb67a;
+	-moz-border-bottom: 1.5px solid #cfb67a;
+	border-bottom: 1.5px solid #cfb67a;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Clipart class - holds the man on desktop clipart --------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.clip-art {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 320px;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ * Site logo class for the main logo -----------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.rt .site-logo {
+	position: relative;
+	display: inline-block;
+	top: 1.5rem;
+}
+
+.rt .site-logo-inner {
+	position: relative;
+}
+
+.rt .site-logo-image {
+	height: 35px;
+	width: 28px;
+}
+
+.rt-njs .site-logo-image {
+	display: none;
+}
+
+.rt .site-logo-inner::before {
+	content: '';
+	position: absolute;
+	background: url('../icons/logo-sub.png') no-repeat center;
+	background-size: contain;
+	height: 19px;
+	width: 20px;
+	bottom: 0.25rem;
+	right: -0.25rem;
+	-webkit-transition: transform 0.3s;
+	-moz-transition: transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-animation: spin 0.3s 0.8s ease-out;
+	-moz-animation: spin 0.3s 0.8s ease-out;
+	animation: spin 0.3s 0.8s ease-out;
+}
+
+.rt .site-logo:hover > .site-logo-inner::before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/* For no JavaScript version */
+.rt-njs .site-logo {
+	display: inline-block;
+	margin-top: 20px;
+}
+
+.rt-njs .site-logo-inner {
+	background-image: url("../icons/logo-light.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 50px;
+	width: 45px;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ *
+ *
+ *----------------------------------------------------------------------------
+ * Applying animations to all the required classes ---------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+.rt .page.visible .page-body.animated {
+	-webkit-animation: slide-up 0.65s 0.45s forwards;
+	-moz-animation: slide-up 0.65s 0.45s forwards;
+	animation: slide-up 0.65s 0.45s forwards;
+	opacity: 0;
+}
+
+.rt .page.visible .page-title::before {
+	-webkit-animation: expand 0.3s 1s forwards;
+	-moz-animation: expand 0.3s 1s forwards;
+	animation: expand 0.3s 1s forwards;
+}
+
+.rt .page.visible .page-title {
+	-webkit-animation: slide-up 0.65s 0.25s forwards;
+	-moz-animation: slide-up 0.65s 0.25s forwards;
+	animation: slide-up 0.65s 0.25s forwards;
+}
+
+.rt .page.visible .avatar::before {
+	-webkit-animation: move-underlay 0.65s 1s forwards;
+	-moz-animation: move-underlay 0.65s 1s forwards;
+	animation: move-underlay 0.65s 1s forwards;
+}
+
+.rt .page.visible .avatar {
+	-webkit-animation: slide-right 0.65s 0.60s forwards;
+	-moz-animation: slide-right 0.65s 0.60s forwards;
+	animation: slide-right 0.65s 0.60s forwards;
+}
+
+.rt .page.visible .about-paragraph {
+	-webkit-animation: slide-up 0.65s 0.55s forwards;
+	-moz-animation: slide-up 0.65s 0.55s forwards;
+	animation: slide-up 0.65s 0.55s forwards;
+}
+
+.rt .page.visible .thumbnail {
+	-webkit-animation: slide-up 0.65s forwards;
+	-moz-animation: slide-up 0.65s forwards;
+	animation: slide-up 0.65s forwards;
+}
+
+.rt .page.visible .thumbnail:nth-child(1) {
+	-webkit-animation-delay: 0.45s;
+	-moz-animation-delay: 0.45s;
+	animation-delay: 0.45s;
+}
+
+.rt .page.visible .thumbnail:nth-child(2) {
+	-webkit-animation-delay: 0.55s;
+	-moz-animation-delay: 0.55s;
+	animation-delay: 0.55s;
+}
+
+.rt .page.visible .thumbnail:nth-child(3) {
+	-webkit-animation-delay: 0.65s;
+	-moz-animation-delay: 0.65s;
+	animation-delay: 0.65s;
+}
+
+/*
+ *----------------------------------------------------------------------------
+ *
+ *
+ *----------------------------------------------------------------------------
+ * Media queries for responsive layout ---------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+/* For tablet screens */
+@media only screen and (max-width: 858px) {
+	h1 {
+		font-size: 4rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		font-size: 1.3rem;
+	}
+
+	.wrapper {
+		padding: 0;
+		margin: 0;
+		width: auto;
+	}
+
+	.btn {
+		font-size: 1rem;
+		padding: 0.8rem 2.5rem;
+		margin: 2rem 0;
+	}
+
+	.rt .card::before {
+		height: 600px;
+		left: -15%;
+		bottom: 0;
+	}
+
+	.rt .card::after {
+		height: 600px;
+		top: 0;
+		right: -15%;
+	}
+
+	.card {
+		background-color: transparent;
+		height: 100%;
+		box-shadow: none;
+	}
+
+	.intro {
+		display: block;
+		width: 100%;
+		min-height: 620px;
+		text-align: center;
+		left: 0;
+	}
+
+	.intro-inner {
+		position: relative;
+		top: 3rem;
+	}
+
+	.nav {
+		display: block;
+		float: none;
+		text-align: center;
+	}
+
+	.nav-link {
+		font-size: 1rem;
+		margin: 1rem 0.5rem;
+		letter-spacing: 0.1rem;
+	}
+
+	.rt .nav-link::before {
+		background-color: #151516;
+	}
+
+	.rt .nav-link.expanded::before {
+		-webkit-transform: scale(40);
+		transform: scale(40);
+	}
+
+	.page {
+		position: fixed;
+		text-align: center;
+		padding: 0;
+	}
+
+	.page-inner {
+		padding: 1rem;
+	}
+
+	.page-body {
+		font-size: 1.7rem;
+	}
+
+	.page.visible .page-title::before {
+		right: 0;
+		margin: 0 auto;
+	}
+
+	.page.visible .page-title {
+		font-size: 4rem;
+	}
+
+	.rt .page-close {
+		height: 45px;
+		width: 45px;
+		top: 25px;
+		right: 25px;
+	}
+
+	.thumbnail {
+		display: block;
+		width: 100%;
+		margin: 5rem 0;
+	}
+
+	.thumbnail-image {
+		height: initial;
+	}
+
+	.thumbnail:first-child {
+		margin-right: 0;
+	}
+
+	.thumbnail:last-child {
+		margin-left: 0;
+	}
+
+	.thumbnail-inner {
+		width: 500px;
+		margin: 0 auto;
+	}
+
+	.dropbox-body {
+		top: -1rem;
+		left: 0;
+		-webkit-transition-duration: 0.25s !important;
+		transition-duration: 0.25s !important;
+		-webkit-transform-origin: center;
+		transform-origin: center;
+	}
+
+	.dropbox-body-inner {
+		left: -5.2rem;
+		width: 310px;
+	}
+
+	.dropbox-body-inner::before {
+		height: 30px;
+		width: 30px;
+		bottom: -1.8rem;
+		left: 46.5%;
+		right: 45%;
+		border-top: 14px solid #212223;
+		border-right: 16px solid transparent;
+		border-left: 14px solid transparent;
+	}
+
+	.site-banner {
+		width: 250px;
+		padding: 1rem 2.5rem;
+	}
+
+	.social-medias {
+		width: 100%;
+		margin: 1rem auto;
+		text-align: center;
+	}
+
+	.social-medias-icon {
+		background-size: 30px 30px;
+		height: 50px;
+		width: 50px;
+		margin: 0 2rem;
+	}
+
+	.avatar {
+		display: block;
+		vertical-align: initial;
+		margin: 2rem auto 6rem;
+	}
+
+	.about-paragraph {
+		margin: 0;
+		width: 100%;
+	}
+
+	.clip-art {
+		position: relative;
+		float: right;
+		top: 2rem;
+		height: 80%;
+		width: 80%;
+	}
+
+	.rt .site-logo {
+		margin: 2rem 0;
+	}
+	
+	.rt .site-logo-inner {
+		position: relative;
+	}
+	
+	.rt .site-logo-image {
+		height: 50px;
+		width: 40px;
+	}
+	
+	.rt .site-logo-inner::before {
+		height: 27.5px;
+		width: 25px;
+		right: -0.25rem;
+	}
+}
+
+/* For mobile screens */
+@media only screen and (max-width: 720px) {
+	h1 {
+		font-size: 3rem !important;
+	}
+
+	h2 {
+		font-size: 1.45rem !important;
+	}
+
+	p {
+		font-size: 1rem !important;
+	}
+
+	.btn {
+		font-size: 0.8rem !important;
+		padding: 0.6rem 1.8rem !important;
+	}
+
+	.rt .card::before {
+		height: 450px !important;
+		left: -30% !important;
+		bottom: 0 !important;
+	}
+	
+	.rt .card::after {
+		height: 310px !important;
+		top: -10% !important;
+		right: -20% !important;
+	}
+
+	.rt .card-inner {
+		padding: 1rem !important;
+	}
+
+	.intro {
+		min-height: 540px !important;
+	}
+
+	.nav-link {
+		font-size: 0.7rem !important;
+		margin: 0.8rem 0 !important;
+	}
+
+	.page-body {
+		font-size: 1.1rem !important;
+	}
+
+	.page.visible .page-title {
+		font-size: 2.2rem !important;
+	}
+
+	.rt .page-close {
+		height: 24px !important;
+		width: 24px !important;
+		top: 20px !important;
+		right: 22px !important;
+	}
+
+	.thumbnail-inner {
+		width: 100% !important;
+	}
+
+	.dropbox-body-inner {
+		left: -6.5rem !important;
+	}
+
+	.social-medias-icon {
+		background-size: 20px 20px !important;
+		height: 35px !important;
+		width: 35px !important;
+		margin: 0 1rem !important;
+	}
+
+	.avatar {
+		height: 150px !important;
+		width: 120px !important;
+	}
+}
+
+/*
+ *----------------------------------------------------------------------------
+ *
+ *
+ *----------------------------------------------------------------------------
+ * Animation keyframes -------------------------------------------------------
+ * ---------------------------------------------------------------------------
+ */
+
+@-webkit-keyframes spin {
+	to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes spin {
+	to { -moz-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+	to { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes remove-z-index {
+	from { z-index: 1; }
+	to { z-index: 0 }
+}
+
+@-moz-keyframes remove-z-index {
+	from { z-index: 1; }
+	to { z-index: 0 }
+}
+
+@keyframes remove-z-index {
+	from { z-index: 1; }
+	to { z-index: 0; }
+}
+
+@-webkit-keyframes set-z-index {
+	from { z-index: 0; }
+	to { z-index: 1; }
+}
+
+@-moz-keyframes set-z-index {
+	from { z-index: 0; }
+	to { z-index: 1; }
+}
+
+@keyframes set-z-index {
+	from { z-index: 0; }
+	to { z-index: 1; }
+}
+
+@keyframes fade {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@-webkit-keyframes slide-up {
+	from {
+		-webkit-transform: translateY(30px);
+		opacity: 0;
+	}
+
+	to {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes slide-up {
+	from {
+		-moz-transform: translateY(30px);
+		opacity: 0;
+	}
+
+	to {
+		-moz-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-up {
+	from {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slide-right {
+	from {
+		-webkit-transform: translateX(-30px);
+		opacity: 0;
+	}
+
+	to {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes slide-right {
+	from {
+		-moz-transform: translateX(-30px);
+		opacity: 0;
+	}
+
+	to {
+		-moz-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-right {
+	from {
+		transform: translateX(-30px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes move-underlay {
+	from {
+		-webkit-transform: translate(0, 0);
+		opacity: 0;
+	}
+
+	to {
+		-webkit-transform: translate(30px, 30px);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes move-underlay {
+	from {
+		-moz-transform: translate(0, 0);
+		opacity: 0;
+	}
+
+	to {
+		-moz-transform: translate(30px, 30px);
+		opacity: 1;
+	}
+}
+
+@keyframes move-underlay {
+	from {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate(30px, 30px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes expand {
+	to { -webkit-transform: scale(1); }
+}
+
+@-moz-keyframes expand {
+	to { -moz-transform: scale(1); }
+}
+
+@keyframes expand {
+	to { transform: scale(1); }
+}
